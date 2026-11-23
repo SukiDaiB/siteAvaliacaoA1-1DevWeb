@@ -54,7 +54,7 @@
               </p>
               <ul>
                 <li>
-                  Encontros semanais de 2 horas.
+                  Dois encontros semanais de 2 horas.
                 </li>
                 <li>
                   Quartas e sextas, das 18h30 às 20h30.
@@ -90,7 +90,7 @@
     <!-- Modal de orçamento -->
     <div class="modal fade" id="orcamento" tabindex="-1">
       <div class="modal-dialog modal-lg">
-        <form class="modal-content">
+        <form id="form-orcamento" class="modal-content" data-aula="2">
           <div class="modal-header">
             <h2 class="modal-title fs-5">
               Solicitar orçamento ⬝ Pintura
@@ -99,66 +99,75 @@
             </button>
           </div>
           <div class="modal-body">
+            <h3 class="fs-6 mb-2">
+              Escolha as aulas
+            </h3>
+            <div id="lista-aulas" class="mb-2">
+            </div>
+            <p class="fw-bold mb-4">
+              Total por mês: <span id="total-orcamento">R$ 0,00</span>
+            </p>
             <div class="row g-3">
               <div class="col-md-6">
                 <label class="form-label" for="nome">
                   Nome
                 </label>
-                <input id="nome" class="form-control" required>
+                <input id="nome" name="nome" class="form-control" required>
               </div>
               <div class="col-md-6">
                 <label class="form-label" for="email">
                   E-mail
                 </label>
-                <input id="email" type="email" class="form-control" required>
+                <input id="email" name="email" type="email" class="form-control" required>
               </div>
               <div class="col-md-6">
                 <label class="form-label" for="telefone">
                   Telefone
                 </label>
-                <input id="telefone" class="form-control" required>
+                <input id="telefone" name="telefone" class="form-control" required>
               </div>
               <div class="col-md-6">
                 <label class="form-label" for="endereco">
                   Endereço
                 </label>
-                <input id="endereco" class="form-control">
+                <input id="endereco" name="endereco" class="form-control">
               </div>
               <div class="col-md-6">
                 <label class="form-label" for="cidade">
                   Cidade
                 </label>
-                <input id="cidade" class="form-control">
+                <input id="cidade" name="cidade" class="form-control">
               </div>
               <div class="col-md-2">
                 <label class="form-label" for="uf">
                   UF
                 </label>
-                <input id="uf" class="form-control" maxlength="2">
+                <input id="uf" name="uf" class="form-control" maxlength="2">
               </div>
               <div class="col-md-4">
                 <label class="form-label" for="data-desejada">
                   Data desejada
                 </label>
-                <input id="data-desejada" type="date" class="form-control">
+                <input id="data-desejada" name="data_desejada" type="date" class="form-control">
               </div>
               <div class="col-12">
                 <label class="form-label" for="observacoes">
                   Observações
                 </label>
-                <textarea id="observacoes" class="form-control" rows="3">
-                </textarea>
+                <textarea id="observacoes" name="observacoes" class="form-control" rows="3"></textarea>
               </div>
             </div>
           </div>
           <div class="modal-footer">
-            <button class="btn btn-atelier">
+            <button class="btn btn-atelier" type="submit">
               Enviar solicitação
             </button>
           </div>
         </form>
       </div>
     </div>
+    <script src="orcamento.js">
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
     </script>
   </body>
